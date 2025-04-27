@@ -1,9 +1,9 @@
 <?php
 
-namespace LaravelLogger\Services;
+namespace Logger\Services;
 
-use LaravelLogger\DTO\LogCreateDTO;
-use LaravelLogger\Models\Log;
+use Logger\DTO\LogCreateDTO;
+use Logger\Models\Log;
 
 class LogService {
     public function __construct() {}

@@ -1,14 +1,14 @@
 <?php
 
-namespace LaravelLogger\Models;
+namespace Logger\Models;
 
-use LaravelLogger\Database\Factories\LogFactory;
-use LaravelLogger\Filters\LogFilters;
+use Logger\Database\Factories\LogFactory;
+use Logger\Filters\LogFilters;
 
-use LaravelQueryBuilder\Traits\Filterable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use QueryBuilder\Traits\Filterable;
 
 class Log extends Model
 {

@@ -1,12 +1,12 @@
 <?php
 
-namespace LaravelLogger\Actions;
+namespace Logger\Actions;
 
-use LaravelLogger\DTO\ActionLogShowDTO;
-use LaravelLogger\Filters\LogFilters;
-use LaravelLogger\Models\ActionLog;
-use LaravelLogger\Models\Log;
-use LaravelLogger\Repositories\ActionLogRepository;
+use Logger\DTO\ActionLogShowDTO;
+use Logger\Filters\LogFilters;
+use Logger\Models\ActionLog;
+use Logger\Models\Log;
+use Logger\Repositories\ActionLogRepository;
 
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Model;
@@ -23,7 +23,7 @@ class ActionLogActions {
      * showById
      *
      * @param ActionLogShowDTO $params
-     * 
+     *
      * @return ActionLog|Collection|Model
      */
     public function showById(ActionLogShowDTO $dto): ActionLog|Collection|Model

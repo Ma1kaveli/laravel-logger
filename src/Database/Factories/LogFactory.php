@@ -1,9 +1,9 @@
 <?php
 
-namespace LaravelLogger\Database\Factories;
+namespace Logger\Database\Factories;
 
-use LaravelLogger\Models\ActionLog;
-use LaravelLogger\Models\Log;
+use Logger\Models\ActionLog;
+use Logger\Models\Log;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 

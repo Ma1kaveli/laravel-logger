@@ -1,8 +1,8 @@
 <?php
 
-namespace LaravelLogger\Database\Seeders\Test;
+namespace Logger\Database\Seeders\Test;
 
-use LaravelLogger\Models\Log;
+use Logger\Models\Log;
 
 use Illuminate\Database\Seeder;
 

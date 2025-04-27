@@ -1,6 +1,6 @@
 <?php
 
-namespace LaravelLogger\Resources;
+namespace Logger\Resources;
 
 use Illuminate\Http\Resources\Json\JsonResource;
 

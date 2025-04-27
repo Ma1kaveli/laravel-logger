@@ -1,10 +1,10 @@
 <?php
 
-namespace LaravelLogger\Repositories;
+namespace Logger\Repositories;
 
-use LaravelLogger\Models\ActionLog;
+use Logger\Models\ActionLog;
 
-use LaravelQueryBuilder\Repositories\BaseRepository;
+use QueryBuilder\Repositories\BaseRepository;
 
 class ActionLogRepository extends BaseRepository {
     protected string $successPrefix;

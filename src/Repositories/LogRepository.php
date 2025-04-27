@@ -1,13 +1,13 @@
 <?php
 
-namespace LaravelLogger\Repositories;
+namespace Logger\Repositories;
 
-use LaravelLogger\DTO\ActionLogShowDTO;
-use LaravelLogger\Filters\LogFilters;
-use LaravelLogger\Models\Log;
+use Logger\DTO\ActionLogShowDTO;
+use Logger\Filters\LogFilters;
+use Logger\Models\Log;
 
 use Illuminate\Pagination\LengthAwarePaginator;
-use LaravelQueryBuilder\Repositories\BaseRepository;
+use QueryBuilder\Repositories\BaseRepository;
 
 class LogRepository extends BaseRepository {
 

@@ -7,6 +7,6 @@ php artisan seed:test-logs
 
 ## Publish config
 ```
-php artisan vendor:publish --provider="LaravelLogger\Providers\LoggerServiceProvider" --tag="logger-config"
+php artisan vendor:publish --provider="Logger\Providers\LoggerServiceProvider" --tag="logger-config"
 php artisan vendor:publish --tag=logger-config
 ```

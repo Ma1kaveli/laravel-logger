@@ -1,10 +1,10 @@
 <?php
 
-namespace LaravelLogger\DTO;
+namespace Logger\DTO;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use LaravelQueryBuilder\DTO\ListDTO;
+use QueryBuilder\DTO\ListDTO;
 
 class ActionLogShowDTO {
     public function __construct(

@@ -1,8 +1,8 @@
 <?php
 
-namespace LaravelLogger\Actions;
+namespace Logger\Actions;
 
-use LaravelLogger\Repositories\LogRepository;
+use Logger\Repositories\LogRepository;
 
 class LogActions {
     public LogRepository $logRepository;

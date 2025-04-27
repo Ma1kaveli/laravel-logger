@@ -1,12 +1,12 @@
 <?php
 
-namespace LaravelLogger\Actions;
+namespace Logger\Actions;
 
-use LaravelLogger\Facades\LaravelLog;
+use Logger\Facades\LaravelLog;
 
-use LaravelLogger\DTO\LogCreateDTO;
-use LaravelLogger\Repositories\ActionLogRepository;
-use LaravelLogger\Services\LogService;
+use Logger\DTO\LogCreateDTO;
+use Logger\Repositories\ActionLogRepository;
+use Logger\Services\LogService;
 
 use Exception;
 

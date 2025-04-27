@@ -1,8 +1,8 @@
 <?php
 
-namespace LaravelLogger\Console\Commands;
+namespace Logger\Console\Commands;
 
-use LaravelLogger\Database\Seeders\ActionLogSeeder;
+use Logger\Database\Seeders\ActionLogSeeder;
 
 use Exception;
 use Illuminate\Console\Command;

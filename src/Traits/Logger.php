@@ -1,8 +1,8 @@
 <?php
 
-namespace LaravelLogger\Traits;
+namespace Logger\Traits;
 
-use LaravelLogger\Actions\LoggerActions;
+use Logger\Actions\LoggerActions;
 
 trait Logger {
 

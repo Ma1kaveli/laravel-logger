@@ -1,6 +1,6 @@
 <?php
 
-namespace LaravelLogger\Console\Commands;
+namespace Logger\Console\Commands;
 
 use Illuminate\Console\Command;
 

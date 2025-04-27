@@ -1,10 +1,10 @@
 <?php
 
-namespace LaravelLogger\Providers;
+namespace Logger\Providers;
 
-use LaravelLogger\Console\Commands\CLoadActionLogs;
-use LaravelLogger\Console\Commands\CLoadTestLogs;
-use LaravelLogger\Console\Commands\CMigrateLogger;
+use Logger\Console\Commands\CLoadActionLogs;
+use Logger\Console\Commands\CLoadTestLogs;
+use Logger\Console\Commands\CMigrateLogger;
 
 use Illuminate\Support\ServiceProvider;
 

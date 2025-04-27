@@ -1,9 +1,9 @@
 <?php
 
-namespace LaravelLogger\Resources;
+namespace Logger\Resources;
 
 use Illuminate\Http\Resources\Json\JsonResource;
-use LaravelQueryBuilder\Resources\PaginatedCollection;
+use QueryBuilder\Resources\PaginatedCollection;
 
 class ActionLogResource extends JsonResource {
     public function toArray($request)

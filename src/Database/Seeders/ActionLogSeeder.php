@@ -1,8 +1,8 @@
 <?php
 
-namespace LaravelLogger\Database\Seeders;
+namespace Logger\Database\Seeders;
 
-use LaravelLogger\Models\ActionLog;
+use Logger\Models\ActionLog;
 
 use Illuminate\Database\Seeder;
 

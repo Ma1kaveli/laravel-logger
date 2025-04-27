@@ -1,12 +1,12 @@
 <?php
 
-namespace LaravelLogger\Filters;
+namespace Logger\Filters;
 
-use LaravelQueryBuilder\BaseQueryBuilder;
+use QueryBuilder\BaseQueryBuilder;
 
 use Illuminate\Pagination\LengthAwarePaginator;
-use LaravelQueryBuilder\DTO\AvailableSort;
-use LaravelQueryBuilder\DTO\AvailableSorts;
+use QueryBuilder\DTO\AvailableSort;
+use QueryBuilder\DTO\AvailableSorts;
 
 class LogFilters extends BaseQueryBuilder
 {

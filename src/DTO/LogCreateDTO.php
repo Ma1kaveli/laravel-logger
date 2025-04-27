@@ -1,8 +1,8 @@
 <?php
 
-namespace LaravelLogger\DTO;
+namespace Logger\DTO;
 
-use LaravelLogger\Models\ActionLog;
+use Logger\Models\ActionLog;
 
 class LogCreateDTO {
     public function __construct(
