@@ -8,7 +8,7 @@ use Logger\Models\Log;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\LaravelLogger\Models\Log>
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\Logger\Models\Log>
  */
 class LogFactory extends Factory
 {
