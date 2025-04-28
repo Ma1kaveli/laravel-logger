@@ -18,7 +18,7 @@ class LogWithActionLogResource extends JsonResource {
             'action_log' => new ActionLogShortResource($this->actionLog),
             'user' =>
                 config('logger.user_resource')
-                ? config('logger.user_resource')($this->user)
+                ? call_user_func(config('logger.user_resource'), $this->user) 
                 : $this->user,
         ];
     }

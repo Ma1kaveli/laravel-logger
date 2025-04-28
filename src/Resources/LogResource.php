@@ -17,7 +17,7 @@ class LogResource extends JsonResource {
             'is_error' => $this->is_error,
             'user' =>
                 config('logger.user_resource')
-                ? config('logger.user_resource')($this->user)
+                ? call_user_func(config('logger.user_resource'), $this->user) 
                 : $this->user,
         ];
     }
