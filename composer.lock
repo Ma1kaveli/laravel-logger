@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "fa3e0d1b29b1425bec72d24eeee4454b",
+    "content-hash": "3151d8599afe34eb7d30f9c18b631fcf",
     "packages": [
         {
             "name": "brick/math",
@@ -1994,16 +1994,16 @@
         },
         {
             "name": "makaveli/laravel-query-builder",
-            "version": "1.0.9",
+            "version": "1.0.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Ma1kaveli/laravel-query-builder.git",
-                "reference": "38519464a31f051ffa985b6140c9de062c1ce529"
+                "reference": "616037a0a91ee27f5cb75bfe9d72fbc083e74adf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Ma1kaveli/laravel-query-builder/zipball/38519464a31f051ffa985b6140c9de062c1ce529",
-                "reference": "38519464a31f051ffa985b6140c9de062c1ce529",
+                "url": "https://api.github.com/repos/Ma1kaveli/laravel-query-builder/zipball/616037a0a91ee27f5cb75bfe9d72fbc083e74adf",
+                "reference": "616037a0a91ee27f5cb75bfe9d72fbc083e74adf",
                 "shasum": ""
             },
             "require": {
@@ -2034,16 +2034,16 @@
                     "email": "mikhail.udovenko.02@mail.ru"
                 }
             ],
-            "description": "Advanced Query Builder for Laravel",
+            "description": "Query Builder for Laravel",
             "keywords": [
                 "framework",
                 "laravel"
             ],
             "support": {
-                "source": "https://github.com/Ma1kaveli/laravel-query-builder/tree/1.0.9",
+                "source": "https://github.com/Ma1kaveli/laravel-query-builder/tree/1.0.10",
                 "issues": "https://github.com/Ma1kaveli/laravel-query-builder/issues"
             },
-            "time": "2025-04-28T12:50:54+00:00"
+            "time": "2025-04-29T08:26:18+00:00"
         },
         {
             "name": "monolog/monolog",
