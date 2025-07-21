@@ -40,12 +40,12 @@ class ActionLogShowDTO {
 
         $userId = $dto->params['user_id'];
         if ($getValidUserId) {
-            $getValidUserId($authUser, $userId);
+            $userId = $getValidUserId($authUser, $userId);
         }
 
         $organizationId = $dto->params['organization_id'];
         if ($getValidOrganizationId) {
-            $getValidOrganizationId($authUser, $organizationId);
+            $organizationId = $getValidOrganizationId($authUser, $organizationId);
         }
 
         return new self(
@@ -81,7 +81,7 @@ class ActionLogShowDTO {
         );
 
         if ($getValidUserId) {
-            $getValidUserId($authUser, $userId);
+            $userId = $getValidUserId($authUser, $userId);
         }
 
         return new self(
@@ -117,11 +117,11 @@ class ActionLogShowDTO {
 
         $userId = $dto->params['user_id'];
         if ($getValidUserId) {
-            $getValidUserId($authUser, $userId);
+            $userId = $getValidUserId($authUser, $userId);
         }
 
         if ($getValidOrganizationId) {
-            $getValidOrganizationId($authUser, $organizationId);
+            $organizationId = $getValidOrganizationId($authUser, $organizationId);
         }
 
         return new self(

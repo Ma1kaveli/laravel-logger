@@ -27,7 +27,7 @@ return [
     | User resource model for LogResource
     |--------------------------------------------------------------------------
     */
-    'user_resource' => App\Resources\UserShortResource::class,
+    'user_resource' => [\App\Modules\Base\Resources\UserShortResource::class, 'once'],
 
     /*
     |--------------------------------------------------------------------------

@@ -3,7 +3,6 @@
 namespace Logger\Actions;
 
 use Logger\Facades\LaravelLog;
-
 use Logger\DTO\LogCreateDTO;
 use Logger\Repositories\ActionLogRepository;
 use Logger\Services\LogService;
