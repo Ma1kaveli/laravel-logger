@@ -132,7 +132,7 @@ class JProcessLogSave implements ShouldQueue
      */
     public static function dispatchSuccess(string $slug, ?Authenticatable $user): void
     {
-        self::dispatch($slug, $user, null, null, 'success');
+        self::dispatch($slug, $user, null, 'success', []);
     }
 
     /**
@@ -146,7 +146,7 @@ class JProcessLogSave implements ShouldQueue
      */
     public static function dispatchError(string $slug, ?Authenticatable $user, ?string $error): void
     {
-        self::dispatch($slug, $user, $error, null, 'error');
+        self::dispatch($slug, $user, $error, 'error', []);
     }
 
     /**
@@ -160,6 +160,6 @@ class JProcessLogSave implements ShouldQueue
      */
     public static function dispatchSoftMethod(string $slug, ?Authenticatable $user, array $data): void
     {
-        self::dispatch($slug, $user, null, $data, 'soft_method');
+        self::dispatch($slug, $user, null, 'soft_method', $data);
     }
 }
