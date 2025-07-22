@@ -30,9 +30,9 @@ class JProcessLogSave implements ShouldQueue
     protected ?string $error;
 
     /**
-     * @var Authenticatable
+     * @var ?Authenticatable
      */
-    protected Authenticatable $user;
+    protected ?Authenticatable $user;
 
     /**
      * @var array
@@ -57,7 +57,7 @@ class JProcessLogSave implements ShouldQueue
      * Create a new job instance.
      *
      * @param string $slug
-     * @param Authenticatable $user
+     * @param ?Authenticatable $user
      * @param ?string $error = null
      * @param string $logType = 'success'
      * @param array $data = []
@@ -66,7 +66,7 @@ class JProcessLogSave implements ShouldQueue
      */
     public function __construct(
         string $slug,
-        Authenticatable $user,
+        ?Authenticatable $user,
         ?string $error = null,
         string $logType = 'success',
         array $data = []
@@ -95,7 +95,9 @@ class JProcessLogSave implements ShouldQueue
      */
     public function handle()
     {
-        Auth::setUser($this->user);
+        if (!empty($this->user)) {
+            Auth::setUser($this->user);
+        }
         LaravelLog::info('JProcessLogSave: Starting job...');
         try {
             switch ($this->logType) {
@@ -124,11 +126,11 @@ class JProcessLogSave implements ShouldQueue
      * dispatchSuccess
      *
      * @param string $slug
-     * @param Authenticatable $user
+     * @param ?Authenticatable $user
      *
      * @return void
      */
-    public static function dispatchSuccess(string $slug, Authenticatable $user): void
+    public static function dispatchSuccess(string $slug, ?Authenticatable $user): void
     {
         self::dispatch($slug, $user, null, null, 'success');
     }
@@ -137,12 +139,12 @@ class JProcessLogSave implements ShouldQueue
      * dispatchError
      *
      * @param string $slug
-     * @param Authenticatable $user
+     * @param ?Authenticatable $user
      * @param ?string $error
      *
      * @return void
      */
-    public static function dispatchError(string $slug, Authenticatable $user, ?string $error): void
+    public static function dispatchError(string $slug, ?Authenticatable $user, ?string $error): void
     {
         self::dispatch($slug, $user, $error, null, 'error');
     }
@@ -151,12 +153,12 @@ class JProcessLogSave implements ShouldQueue
      * dispatchSoftMethod
      *
      * @param string $slug
-     * @param Authenticatable $user
+     * @param ?Authenticatable $user
      * @param array $data
      *
      * @return void
      */
-    public static function dispatchSoftMethod(string $slug, Authenticatable $user, array $data): void
+    public static function dispatchSoftMethod(string $slug, ?Authenticatable $user, array $data): void
     {
         self::dispatch($slug, $user, null, $data, 'soft_method');
     }
