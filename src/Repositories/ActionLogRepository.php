@@ -2,9 +2,8 @@
 
 namespace Logger\Repositories;
 
+use Core\Repositories\BaseRepository;
 use Logger\Models\ActionLog;
-
-use QueryBuilder\Repositories\BaseRepository;
 
 class ActionLogRepository extends BaseRepository {
     protected string $successPrefix;
@@ -12,7 +11,7 @@ class ActionLogRepository extends BaseRepository {
     protected string $errorPrefix;
 
     public function __construct() {
-        parent::__construct(new ActionLog());
+        parent::__construct(ActionLog::class);
         $this->successPrefix = config('logger.success_prefix');
         $this->errorPrefix = config('logger.error_prefix');
     }
@@ -25,7 +24,7 @@ class ActionLogRepository extends BaseRepository {
      */
     public function getSuccessActionLogBySlug(string $slug): ActionLog
     {
-        return $this->model->where('slug', "$this->successPrefix.$slug")->first();
+        return $this->query()->where('slug', "$this->successPrefix.$slug")->first();
     }
 
     /**
@@ -36,7 +35,7 @@ class ActionLogRepository extends BaseRepository {
      */
     public function getErrorActionLogBySlug(string $slug): ActionLog
     {
-        return $this->model->where('slug', "$this->errorPrefix.$slug")->first();
+        return $this->query()->where('slug', "$this->errorPrefix.$slug")->first();
     }
 
     /**
@@ -48,10 +47,14 @@ class ActionLogRepository extends BaseRepository {
      */
     public function getDescription(ActionLog $actionLog): string {
         if ($this->isAuth()) {
-            // TODO: put it in the config
-            return $this->user->id . ') ' . $this->user->phone . ' - ' .  $actionLog->name;
-        }
+            $callback = config('actionlog.repository.description_callback');
 
+            if (is_callable($callback)) {
+                return $callback($this->user, $actionLog);
+            }
+
+            return $this->user->id . ') ' . $this->user->phone . ' - ' . $actionLog->name;
+        }
 
         return $actionLog->name;
     }

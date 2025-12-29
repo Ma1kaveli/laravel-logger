@@ -2,9 +2,10 @@
 
 namespace Logger\DTO;
 
+use Core\DTO\ListDTO;
+
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use QueryBuilder\DTO\ListDTO;
 
 class ActionLogShowDTO {
     public function __construct(

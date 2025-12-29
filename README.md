@@ -14,41 +14,26 @@
 
 - PHP 8.2 или выше
 - Laravel 10.10, 11.0 или 12.0
-- Пакет `makaveli/laravel-query-builder` (версия 1.0.15)
+- Пакет `makaveli/laravel-query-builder` (версия 1.1.0)
+- Пакет `makaveli/laravel-core` (версия 1.0.0)
 
 ## Установка
 
-1. Добавьте ссылку на пакет в composer.json вашего проекта:
-   ```json
-   {
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://github.com/Ma1kaveli/laravel-logger"
-        }
-    ]
-   }
-   ```
-
-2. Установите пакет через Composer:
+1. Установите пакет через Composer:
 
    ```bash
    composer require makaveli/laravel-logger
    ```
 
-3. (Опционально) Опубликуйте файл конфигурации:
+2. (Опционально) Опубликуйте файл конфигурации:
 
    ```bash
    php artisan vendor:publish --tag=logger-config
    ```
-   или
-   ```bash
-   php artisan vendor:publish --provider="Logger\Providers\LoggerServiceProvider" --tag="logger-config"
-   ```
 
    Файл конфигурации будет скопирован в `config/logger.php`, где вы сможете настроить параметры, такие как модель пользователя или поддержку организаций.
 
-4. Выполните миграции пакета:
+3. Выполните миграции пакета:
 
    ```bash
    php artisan migrate:logger
@@ -78,6 +63,11 @@ return [
     'slug_list' => [
         ['name' => 'User Login', 'slug' => 'user.login'],
         ['name' => 'User Logout', 'slug' => 'user.logout'],
+    ],
+    'repository' => [
+        'description_callback' => function (\Illuminate\Contracts\Auth\Authenticatable $user, Logger\Models\ActionLog $log) {
+            return strtoupper($user->name) . ' did: ' . $log->name;
+        }
     ],
     'logs_factory_count' => env('LOG_FACTORY', 1000),
 ];

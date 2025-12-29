@@ -3,10 +3,10 @@
 namespace Logger\Filters;
 
 use QueryBuilder\BaseQueryBuilder;
-
-use Illuminate\Pagination\LengthAwarePaginator;
 use QueryBuilder\DTO\AvailableSort;
 use QueryBuilder\DTO\AvailableSorts;
+
+use Illuminate\Pagination\LengthAwarePaginator;
 
 class LogFilters extends BaseQueryBuilder
 {
